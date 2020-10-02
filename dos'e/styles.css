@@ -1,0 +1,142 @@
+@font-face {
+    font-family: Pompadur;
+    src: url("Pompadur.ttf");
+}
+
+body {
+    /*ширина элемента*/
+    width: 600px;
+
+    /*отступы элемента*/
+    margin: auto;
+
+    /*цвет фона*/
+    background-color: lightblue;
+
+    /*размер шрифта*/
+    font-size: 16px;
+}
+
+header {
+    font-family: sans-serif;
+}
+.proj_nav {
+    /*отступы элемента*/
+    margin: 0;
+
+    /*отступы границ*/
+    padding-bottom: 8px;
+    padding-top: 8px;
+
+    text-align: right;
+}
+.proj_nav li {
+    /*расположение элементов списка*/
+    display: inline;
+
+    /*границы*/
+    border: 1px solid #000;
+    border-radius: 0.5em;
+
+    /*отступы элементов*/
+    margin-left: 3px;
+
+    /*отступы границ*/
+    padding: 4px;
+
+    /*"вес" шрифта*/
+    font-weight: normal;
+
+    /*цвет*/
+    background-color: lightgray;
+}
+
+
+main {
+    /*отступы элемента*/
+    margin: auto;
+
+    /*граница*/
+    border: 1px solid #000;
+    border-radius: 1em;
+
+    /*отступы границы*/
+    padding: 1em;
+
+    /*цвет фона*/
+    background-color: white;
+
+    /*шрифт*/
+    font-family: Inter, Arial, sans-serif;
+}
+
+h1 {
+    /*размер шрифта*/
+    font-size: 250%;
+
+    /*ширина элемента*/
+    width: 75%;
+
+    /*положение текста*/
+    text-align: center;
+
+    /*отступы элемента*/
+    margin: 16px auto 16px auto;
+}
+h4 {
+    /*размер шрифта*/
+    font-size: 150%;
+
+    /*ширина элемента*/
+    width: 75%;
+
+    /*положение текста*/
+    text-align: center;
+
+    /*отступы элемента*/
+    margin: 8px auto 8px auto
+}
+
+.me .my_name {
+    /*размер шрифта*/
+    font-size: 120%;
+
+    /*"вес" шрифта*/
+    font-weight: bold;
+
+    /*шрифт*/
+    font-family: Pompadur;
+
+    /*отступы элемента*/
+    margin: auto auto 10px auto;
+}
+.me .about_me {
+    /*отступы элемента*/
+    margin: auto;
+}
+
+dl {
+    margin: auto;
+}
+dl dt {
+     font-weight: bold;
+     margin: auto;
+ }
+dl dd {
+    /*отступ элемента*/
+    margin: 2px auto 2px 20px;
+}
+
+ul {
+    margin: auto;
+    padding: 0px 0px 0px 20px;
+}
+
+.art {
+    text-align: center;
+    font-family: Consolas;
+}
+
+footer {
+    text-align: right;
+}

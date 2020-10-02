@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Ханнанов Владимир - M33021</title>
-    <!link rel="stylesheet" href="outlines.css">
+    <link rel="stylesheet" href="styles.css">
     <meta name="keywords" content="ИТМО, студент, информационные системы, Ханнанов">
     <meta name="description"
           content="Досье на студента третьего курса направления Информационные системы университета ИТМО">
@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <ul class="proj_nav">
                 <li>Обо мне</li>
                 <li>Примеры кода</li>
                 <li>Контакты</li>
@@ -20,11 +20,11 @@
     </header>
     <main>
         <h1>Обо мне</h1>
-        <section>
-            <b>Ханнанов Владимир</b>
-            <br>Студент ИТМО, не более.
+        <section class="me">
+            <p class="my_name">Ханнанов Владимир</p>
+            <p class="about_me">Студент ИТМО, не более</p>
         </section>
-        <section>
+        <section class="features">
             <h4>Мои особенности</h4>
             <dl>
                 <dt>Стрессоустойчивость</dt>
@@ -35,7 +35,7 @@
                 <dd>двигатель прогресса</dd>
             </dl>
         </section>
-        <section>
+        <section class="successes">
             <h4>Мои успехи</h4>
             <ul>
                 <li>Дожил до 18, родившись в Красноярске</li>
@@ -44,22 +44,20 @@
                 <li><time datetime="2015-3-8">8 марта 2015 года</time> постиг тайны бытия</li>
             </ul>
         </section>
-        <section>
+        <section class="quote">
             <h4>Любимая цитата</h4>
-            <q cite="https://vk.com/unvalued">Идёт медведь по лесу, видит - машина горит, сел в неё <del>и сгорел</del>, а она ему как раз.</q>
+            <q cite="https://vk.com/unvalued">Идёт медведь по лесу, видит - машина горит, сел в неё <del>и сгорел</del>, а она ему как раз</q>
         </section>
-        <article>
+        <article class="animal">
             <h4>Моё тотемное животное</h4>
-            <p>
-                <code>
-                    &nbsp;&nbsp;/&nbsp;_&nbsp;\<br>
+            <p class="art">
+                    /&nbsp;_&nbsp;\<br>
                     \_\(_)/_/<br>
-                    &nbsp;_//"\\_<br>
-                    &nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;\
-                </code>
+                    _//"\\_<br>
+                    /&nbsp;&nbsp;&nbsp;\
             </p>
         </article>
-        <article>
+        <article class="my_code">
             <h4>Код, за который не стыдно</h4>
             <code>
                 Console.WriteLine("Hello, World!");
