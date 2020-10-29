@@ -11,7 +11,7 @@ body {
     margin: auto;
 
     /*цвет фона*/
-    background-color: lightblue;
+    background-color: lightskyblue;
 
     /*размер шрифта*/
     font-size: 16px;
@@ -97,20 +97,22 @@ h4 {
     margin: 8px auto 8px auto
 }
 
-.me .my_name {
+.round {
+    alignment: right;
+    border-radius: 150px;
+}
+
+#me #my_name {
     /*размер шрифта*/
     font-size: 120%;
 
     /*"вес" шрифта*/
     font-weight: bold;
 
-    /*шрифт*/
-    font-family: Pompadur;
-
     /*отступы элемента*/
     margin: auto auto 10px auto;
 }
-.me .about_me {
+#me #about_me {
     /*отступы элемента*/
     margin: auto;
 }
@@ -132,7 +134,7 @@ ul {
     padding: 0px 0px 0px 20px;
 }
 
-.art {
+#art {
     text-align: center;
     font-family: Consolas;
 }
