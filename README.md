@@ -1,2 +1,2 @@
 # portfolio
-html doc is in "dos'e" dir
+html doc is in "port" dir
