@@ -20,10 +20,14 @@
     </header>
     <main>
         <h1>Обо мне</h1>
-        <img src="me3.jpg" width="100" height="100" alt="avatar" id="my_photograph">
+        <div id="my_photograph">
+            <img src="me3.jpg" width="100" height="100" alt="avatar">
+        </div>
         <section id="me">
-            <p id="my_name">Ханнанов Владимир</p>
-            <p id="about_me">Студент ИТМО, не более</p>
+            <dl>
+                <dt>Ханнанов Владимир</dt>
+                <dd>Студент ИТМО, не более</dd>
+            </dl>
         </section>
         <section id="features">
             <h4>Мои особенности</h4>
@@ -60,9 +64,11 @@ _//"\\_
         </section>
         <section id="my_code">
             <h4>Код, за который не стыдно</h4>
-            <code>
-                Console.WriteLine("Hello, World!");
-            </code>
+            <div id="hello_world">
+                <code>
+                    Console.WriteLine("Hello, World!");
+                </code>
+            </div>
         </section>
     </main>
     <footer>

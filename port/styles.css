@@ -17,7 +17,7 @@ body {
 
     /*фон*/
     background-size: 1920px 1680px;
-    background-image: url("white-gradient.jpg");
+    background-image: url("black-gradient.jpg");
     background-color: lightgray;
 
     /*шрифт*/
@@ -27,7 +27,7 @@ body {
 
 #proj_nav {
     /*отступы элемента*/
-    margin: 0;
+    margin: 78px 0 0;
 
     /*отступы границ*/
     padding-bottom: 8px;
@@ -51,22 +51,11 @@ body {
 }
 
 main {
-    /*отступы элемента*/
-    /*margin: auto;*/
-
-    /*граница*/
+    padding: 14px;
     border: 3px solid darkgrey;
-    /*border-radius: 1em;*/
-
-    /*отступы границы*/
-    padding: 1em;
-
-    /*цвет фона*/
+    margin: auto;
     background-color: white;
-
-    /*шрифт*/
-    /*font-family: Inter, Arial, sans-serif;*/
-    font-family: Roboto-Regular;
+    font-family: Roboto-Regular, sans-serif;
 }
 
 h1 {
@@ -74,13 +63,13 @@ h1 {
     font-size: 250%;
 
     /*ширина элемента*/
-    width: 75%;
+    /*width: 75%;*/
 
     /*положение текста*/
     text-align: center;
 
     /*отступы элемента*/
-    margin: 16px auto 16px auto;
+    margin: 0 auto 16px auto;
 }
 h4 {
     /*размер шрифта*/
@@ -89,40 +78,38 @@ h4 {
     /*ширина элемента*/
     width: 75%;
 
+    border-bottom: 2px solid darkgrey;;
+
     /*положение текста*/
     text-align: center;
 
     /*отступы элемента*/
-    margin: 8px auto 8px auto
+    margin: 18px auto 10px auto
 }
 
 #my_photograph {
+    text-align: center;
+}
+#my_photograph img {
     border-radius: 50%;
 }
 
-#me #my_name {
-    /*размер шрифта*/
+#me dl {
+    margin: 8px auto 8px auto;
+}
+#me dl dt {
     font-size: 120%;
-
-    /*"вес" шрифта*/
     font-weight: bold;
-
-    /*отступы элемента*/
-    margin: auto auto 10px auto;
-}
-#me #about_me {
-    /*отступы элемента*/
-    margin: auto;
 }
 
-dl {
+#features dl {
     margin: auto;
 }
-dl dt {
+#features dl dt {
      font-weight: bold;
      margin: auto;
  }
-dl dd {
+#features dl dd {
     /*отступ элемента*/
     margin: 2px auto 2px 20px;
 }
