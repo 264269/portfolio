@@ -11,6 +11,7 @@
     src: url("Roboto/Roboto-Regular.ttf");
 }
 
+/*вся информация на сайте*/
 body {
     width: 600px; /*ширина элемента*/
     margin: auto; /*внешние отступы*/
@@ -25,31 +26,35 @@ body {
     font-family: Roboto-Regular, serif;
 }
 
+/*верхушка сайта (навигация и картинка)*/
+header {
+    height: 103px;
+}
 #proj_nav {
     /*отступы элемента*/
-    margin: 78px 0 0;
+    margin: 0;
 
     /*отступы границ*/
-    padding-bottom: 8px;
-    padding-top: 8px;
+    /*padding-bottom: 8px;*/
+    padding-top: 76px;
 
     text-align: right;
 }
 #proj_nav ul {
     margin: 0;
-    padding: 0;
+    padding: 4px 0;
 }
 #proj_nav li {
-    /*расположение элементов списка*/
-    display: inline;
-
-    /*отступы границ*/
+    display: inline; /*расположение элементов списка*/
+    color: #000000;
+    font-weight: bold;
     padding: 4px;
-
-    /*цвет*/
-    background-color: lightgray;
+    background-color: darkgrey;
+    /*border-bottom: 1px solid white;*/
 }
 
+
+/*основная информация на сайте*/
 main {
     padding: 14px;
     border: 3px solid darkgrey;
@@ -58,48 +63,42 @@ main {
     font-family: Roboto-Regular, sans-serif;
 }
 
-h1 {
-    /*размер шрифта*/
+#introduction #title {
     font-size: 250%;
-
-    /*ширина элемента*/
-    /*width: 75%;*/
-
-    /*положение текста*/
+    font-weight: bold;
     text-align: center;
-
-    /*отступы элемента*/
     margin: 0 auto 16px auto;
 }
-h4 {
-    /*размер шрифта*/
-    font-size: 150%;
-
-    /*ширина элемента*/
-    width: 75%;
-
-    border-bottom: 2px solid darkgrey;;
-
-    /*положение текста*/
-    text-align: center;
-
-    /*отступы элемента*/
-    margin: 18px auto 10px auto
+#introduction img {
+    /*padding-top: 50px;*/
 }
-
 #my_photograph {
+    height: 100px;
+    width: 100%;
     text-align: center;
 }
 #my_photograph img {
     border-radius: 50%;
 }
 
-#me dl {
-    margin: 8px auto 8px auto;
+h4 {
+    font-size: 150%;
+    width: 75%;
+    border-bottom: 2px solid darkgrey;
+    text-align: center;
+    margin: 18px auto 10px auto
 }
-#me dl dt {
+
+#me {
+    margin-bottom: 15px;
+}
+#me #my_name {
     font-size: 120%;
     font-weight: bold;
+    margin: auto;
+}
+#me #about_me {
+    margin: 0;
 }
 
 #features dl {
@@ -113,17 +112,16 @@ h4 {
     /*отступ элемента*/
     margin: 2px auto 2px 20px;
 }
-
 ul {
     margin: auto;
     padding: 0px 0px 0px 20px;
 }
-
 #art {
     text-align: center;
     font-family: Consolas;
 }
 
+/*подвал*/
 footer {
     text-align: right;
 }
