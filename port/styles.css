@@ -11,46 +11,52 @@
     src: url("Roboto/Roboto-Regular.ttf");
 }
 
-/*вся информация на сайте*/
+
+/*вся информация*/
 body {
+    background: #2a2c2f url("forest.jpg") no-repeat 100% 100%;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+.page {
     width: 600px; /*ширина элемента*/
     margin: auto; /*внешние отступы*/
 
-    /*фон*/
-    background-size: 1920px 1680px;
-    background-image: url("black-gradient.jpg");
-    background-color: lightgray;
-
     /*шрифт*/
+    color: white;
     font-size: 16px;
     font-family: Roboto-Regular, serif;
 }
 
 /*верхушка сайта (навигация и картинка)*/
-header {
-    height: 103px;
+.header {
+    height: 27px;
+    padding-top: 190px;
+    background-image: url("pepe.jpg");
+    background-size: 100%;
 }
-#proj_nav {
-    /*отступы элемента*/
-    margin: 0;
-
-    /*отступы границ*/
-    /*padding-bottom: 8px;*/
-    padding-top: 76px;
-
+.header nav {
     text-align: right;
 }
-#proj_nav ul {
-    margin: 0;
+.header nav ul {
     padding: 4px 0;
 }
-#proj_nav li {
-    display: inline; /*расположение элементов списка*/
-    color: #000000;
-    font-weight: bold;
-    padding: 4px;
+.button {
+    text-decoration: none;
     background-color: darkgrey;
-    /*border-bottom: 1px solid white;*/
+    padding: 4px;
+}
+.button:hover {
+    background-color: grey;
+}
+.header nav li {
+    display: inline;
+    list-style: none;
+
+    color: #000000;
+
+    font-weight: bold;
 }
 
 
@@ -59,27 +65,39 @@ main {
     padding: 14px;
     border: 3px solid darkgrey;
     margin: auto;
-    background-color: white;
+    background: rgba(20, 20, 20, 0.7);
     font-family: Roboto-Regular, sans-serif;
 }
 
-#introduction #title {
+.lead {
+    display: flex;
+    flex-direction: column;
+}
+.lead .title {
     font-size: 250%;
     font-weight: bold;
-    text-align: center;
-    margin: 0 auto 16px auto;
+    margin: 0 auto 16px;
 }
-#introduction img {
-    /*padding-top: 50px;*/
-}
-#my_photograph {
+.lead img {
+    display: block;
+
     height: 100px;
-    width: 100%;
-    text-align: center;
-}
-#my_photograph img {
+    width: 100px;
     border-radius: 50%;
+
+    margin: auto;
 }
+
+/*#introduction #title {*/
+/*}*/
+/*#introduction img {*/
+/*    !*padding-top: 50px;*!*/
+/*}*/
+/*#my_photograph {*/
+/*}*/
+/*#my_photograph img {*/
+/*    border-radius: 50%;*/
+/*}*/
 
 h4 {
     font-size: 150%;
@@ -114,11 +132,11 @@ h4 {
 }
 ul {
     margin: auto;
-    padding: 0px 0px 0px 20px;
+    padding: 0 0 20px;
 }
 #art {
     text-align: center;
-    font-family: Consolas;
+    font-family: Consolas, sans-serif;
 }
 
 /*подвал*/
