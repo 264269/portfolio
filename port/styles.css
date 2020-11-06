@@ -138,12 +138,14 @@ h4 {
 #cite {
     margin: auto;
     align-self: center;
-    height: 90px;
 }
 #bear {
     border: 3px solid darkgrey;
     float: right;
     margin-left: 20px;
+}
+.clearfix {
+    clear: both;
 }
 
 #my_code {
