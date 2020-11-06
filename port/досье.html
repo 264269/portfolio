@@ -24,46 +24,58 @@
                 <h1 class="title">Обо мне</h1>
                 <img src="me3.jpg" width="100" height="100" alt="avatar">
             </section>
-            <section id="me">
-                <p id="my_name">Ханнанов Владимир</p>
-                <p id="about_me">Студент ИТМО, не более</p>
+            <section id="introduction">
+                <div class="content">
+                    <p id="my_name">Ханнанов Владимир</p>
+                    <p id="about_me">Студент ИТМО, не более</p>
+                </div>
             </section>
             <section id="features">
                 <h4>Мои особенности</h4>
-                <dl>
-                    <dt>Стрессоустойчивость</dt>
-                    <dd>обеспечивает стабильность производительности</dd>
-                    <dt>Дружелюбность</dt>
-                    <dd>облегчает взаимодействие с коллективом</dd>
-                    <dt>Лень</dt>
-                    <dd>двигатель прогресса</dd>
-                </dl>
+                <div class="content">
+                    <dl>
+                        <dt>Стрессоустойчивость</dt>
+                        <dd>обеспечивает стабильность производительности</dd>
+                        <dt>Дружелюбность</dt>
+                        <dd>облегчает взаимодействие с коллективом</dd>
+                        <dt>Лень</dt>
+                        <dd>двигатель прогресса</dd>
+                    </dl>
+                </div>
             </section>
             <section id="successes">
                 <h4>Мои успехи</h4>
-                <ul>
-                    <li>Дожил до 18, родившись в Красноярске</li>
-                    <li>Поступил в ИТМО без мам, пап и кредитов</li>
-                    <li>Являюсь электромонтажником второго разряда</li>
-                    <li><time datetime="2015-3-8">8 марта 2015 года</time> постиг тайны бытия</li>
-                </ul>
-            </section>
-            <section id="quote">
-                <h4>Любимая цитата</h4>
-                <q cite="https://vk.com/unvalued">Идёт медведь по лесу, видит - машина горит, сел в неё <del>и сгорел</del>, а она ему как раз</q>
+                <div class="content">
+                    <ul>
+                        <li>Дожил до 18, родившись в Красноярске</li>
+                        <li>Поступил в ИТМО без мам, пап и кредитов</li>
+                        <li>Являюсь электромонтажником второго разряда</li>
+                        <li><time datetime="2015-3-8">8 марта 2015 года</time> постиг тайны бытия</li>
+                    </ul>
+                </div>
             </section>
             <section id="animal">
                 <h4>Моё тотемное животное</h4>
-                <pre id="art">
+                <div  class="content">
+                    <pre id="art">
 / _ \
 \_\(_)/_/
 _//"\\_
 /   \
 </pre>
+                </div>
+
+            </section>
+            <section id="quote">
+                <h4>Любимая цитата</h4>
+                <div id="cite" class="content">
+                    <img src="bear.jpg" width="160" height="90" alt="bear" id="bear">
+                    <q cite="https://vk.com/unvalued">Идёт медведь по лесу, видит - машина горит, сел в неё <del>и сгорел</del>, а она ему как раз</q>
+                </div>
             </section>
             <section id="my_code">
                 <h4>Код, за который не стыдно</h4>
-                <div id="hello_world">
+                <div id="hello_world" class="content">
                     <code>
                         Console.WriteLine("Hello, World!");
                     </code>
@@ -71,7 +83,9 @@ _//"\\_
             </section>
         </main>
         <footer>
-            <a href="https://vk.com/unvalued">https://vk.com/unvalued</a>
+            <ul>
+                <a href="https://vk.com/unvalued" class="button"><li>https://vk.com/unvalued</li></a>
+            </ul>
         </footer>
     </div>
 </body>

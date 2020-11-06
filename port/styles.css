@@ -14,7 +14,7 @@
 
 /*вся информация*/
 body {
-    background: #2a2c2f url("forest.jpg") no-repeat 100% 100%;
+    background: rgb(60, 80, 120) url("forest.jpg") no-repeat 100% 100%;
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -33,13 +33,14 @@ body {
 .header {
     height: 27px;
     padding-top: 190px;
-    background-image: url("pepe.jpg");
-    background-size: 100%;
+    background-image: url("fine.jpg");
+    background-size: cover;
 }
 .header nav {
     text-align: right;
 }
 .header nav ul {
+    margin: 0;
     padding: 4px 0;
 }
 .button {
@@ -65,7 +66,7 @@ main {
     padding: 14px;
     border: 3px solid darkgrey;
     margin: auto;
-    background: rgba(20, 20, 20, 0.7);
+    background: rgba(25, 20, 20, 0.7);
     font-family: Roboto-Regular, sans-serif;
 }
 
@@ -88,58 +89,79 @@ main {
     margin: auto;
 }
 
-/*#introduction #title {*/
-/*}*/
-/*#introduction img {*/
-/*    !*padding-top: 50px;*!*/
-/*}*/
-/*#my_photograph {*/
-/*}*/
-/*#my_photograph img {*/
-/*    border-radius: 50%;*/
-/*}*/
-
 h4 {
     font-size: 150%;
-    width: 75%;
+    max-width: 75%;
     border-bottom: 2px solid darkgrey;
     text-align: center;
-    margin: 18px auto 10px auto
+    margin: 18px auto 10px
+}
+.content {
+    display: block;
+    width: 95%;
+    margin: auto;
 }
 
-#me {
-    margin-bottom: 15px;
-}
-#me #my_name {
+#introduction #my_name {
     font-size: 120%;
     font-weight: bold;
     margin: auto;
 }
-#me #about_me {
+#introduction #about_me {
     margin: 0;
 }
 
-#features dl {
+#features .content dl {
     margin: auto;
 }
-#features dl dt {
+#features .content dl dt {
      font-weight: bold;
      margin: auto;
  }
-#features dl dd {
+#features .content dl dd {
     /*отступ элемента*/
     margin: 2px auto 2px 20px;
 }
-ul {
-    margin: auto;
-    padding: 0 0 20px;
-}
-#art {
-    text-align: center;
-    font-family: Consolas, sans-serif;
+
+#successes ul {
+    margin: 0;
+    padding: 0 0 0 20px;
 }
 
+#art {
+    display: block;
+    text-align: center;
+    font-family: Consolas, sans-serif;
+    margin: 0;
+}
+
+#cite {
+    margin: auto;
+    align-self: center;
+    height: 90px;
+}
+#bear {
+    float: right;
+    margin-left: 20px;
+}
+
+#my_code {
+    clear: both;
+    text-align: center;
+}
 /*подвал*/
 footer {
     text-align: right;
+}
+footer ul {
+    margin: 0;
+    padding: 4px 0;
+}
+footer li {
+    display: inline;
+    list-style: none;
+
+    color: #000000;
+
+    font-weight: bold;
 }
