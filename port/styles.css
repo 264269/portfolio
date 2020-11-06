@@ -33,7 +33,7 @@ body {
 .header {
     height: 27px;
     padding-top: 190px;
-    background-image: url("fine.jpg");
+    background-image: url("pepe.png");
     background-size: cover;
 }
 .header nav {
@@ -45,11 +45,11 @@ body {
 }
 .button {
     text-decoration: none;
-    background-color: darkgrey;
+    background-color: lightblue;
     padding: 4px;
 }
 .button:hover {
-    background-color: grey;
+    background-color: cadetblue;
 }
 .header nav li {
     display: inline;
@@ -64,7 +64,7 @@ body {
 /*основная информация на сайте*/
 main {
     padding: 14px;
-    border: 3px solid darkgrey;
+    border: 3px solid lightblue;
     margin: auto;
     background: rgba(25, 20, 20, 0.7);
     font-family: Roboto-Regular, sans-serif;
