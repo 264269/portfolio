@@ -142,7 +142,7 @@ h4 {
 }
 #bear {
     border: 3px solid darkgrey;
-    border-radius: 20%;
+    border-radius: 1.5em;
     float: right;
     margin-left: 20px;
 }
