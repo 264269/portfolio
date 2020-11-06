@@ -77,7 +77,7 @@ main {
 .lead .title {
     font-size: 250%;
     font-weight: bold;
-    margin: 0 auto 16px;
+    margin: 0 auto 8px;
 }
 .lead img {
     display: block;
