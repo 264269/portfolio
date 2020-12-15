@@ -70,14 +70,16 @@ main {
     font-family: Roboto-Regular, sans-serif;
 }
 
-.lead {
+.lead .content{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    /* align-items: center; */
 }
 .lead .title {
     font-size: 250%;
     font-weight: bold;
-    margin: 0 auto 8px;
+    margin: 0 0 8px;
 }
 .lead img {
     display: block;
@@ -86,7 +88,9 @@ main {
     width: 100px;
     border-radius: 50%;
 
-    margin: auto;
+    margin: 0;
+
+    align-self: center;
 }
 
 h4 {
