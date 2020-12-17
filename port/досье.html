@@ -90,11 +90,29 @@ _//"\\_
                     <script src="lab5.js"></script>
                 </div>
             </section>
+            <section id="popup">
+                <h4>Окошечки!</h4>
+            </section>
         </main>
         <footer>
-            <ul>
-                <a href="https://vk.com/unvalued" class="button"><li>https://vk.com/unvalued</li></a>
-            </ul>
+            <div class="content">
+                <ul>
+                    <li class="button show window">Контакты</li>
+                    <dialog class="window">
+                        <p><a href="https://vk.com/unvalued">https://vk.com/unvalued</a></p>
+                        <p>+7(904)635-14-24</p>
+                        <button class="close window">Закрыть</button>
+                    </dialog>
+                    <script>
+                        document.querySelector('.show.window').onclick = function() {
+                            document.querySelector('dialog.window').showModal();
+                        };
+                        document.querySelector('.close.window').onclick = function() {
+                            document.querySelector('dialog.window').close();
+                        };
+                    </script>
+                </ul>
+            </div>
         </footer>
     </div>
 </body>
