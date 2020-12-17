@@ -16,6 +16,7 @@
 body {
     background: rgb(60, 80, 120) url("forest.jpg") no-repeat 100% 100%;
     background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
 }
@@ -30,41 +31,6 @@ body {
     font-family: Roboto-Regular, serif;
 }
 
-/* верхушка сайта (навигация и картинка) */
-/* сама верхушка */
-.header {
-    height: 27px;
-    padding-top: 152px;
-    background-image: url("pepe.png");
-    background-size: cover;
-}
-/* навигация */
-.header nav {
-    text-align: right;
-}
-/* список ссылок */
-.header nav ul {
-    margin: 0;
-    padding: 4px 0;
-}
-/* кнопочки */
-.button {
-    text-decoration: none;
-    background-color: darkgrey;
-    padding: 4px;
-}
-.button:hover {
-    background-color: grey;
-}
-.header nav li {
-    display: inline;
-    list-style: none;
-
-    color: #000000;
-
-    font-weight: bold;
-}
-
 
 /*основная информация на сайте*/
 main {
@@ -74,7 +40,6 @@ main {
     background: rgba(25, 20, 20, 0.7);
     font-family: Roboto-Regular, sans-serif;
 }
-
 /* заголовочек страницы */
 .lead .content{
     display: flex;
@@ -172,34 +137,4 @@ h4 {
 #my_code {
     clear: both;
     text-align: center;
-}
-
-/*подвал*/
-/* footer {
-    text-align: right;
-} */
-footer .content {
-    width: auto;
-}
-footer ul {
-    display: table;
-    align-self: right;
-    margin: 0;
-    padding: 4px 0;
-}
-footer li {
-    display: inline;
-    list-style: none;
-
-    color: #000000;
-
-    font-weight: bold;
-}
-
-/* вылезающие окна */
-dialog {
-    position: fixed;
-}
-dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.8);
 }

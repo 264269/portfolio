@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <title>Ханнанов Владимир - M33021</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
     <meta name="keywords" content="ИТМО, студент, информационные системы, Ханнанов">
     <meta name="description"
           content="Досье на студента третьего курса направления Информационные системы университета ИТМО">
 </head>
 <body>
     <div class="page">
-        <header class="header">
-            <nav>
-                <ul>
-                    <a href="#features" class="button"><li>Мои особенности</li></a>
-                    <a href="#successes" class="button"><li>Мои успехи</li></a>
-                    <a href="#my_code" class="button"><li>Примеры кода</li></a>
-                </ul>
-            </nav>
+        <header>
+            <div class="references navigation">
+                <a href="#features" class="ref button">Мои особенности</a>
+                <a href="#successes" class="ref button">Мои успехи</a>
+                <a href="#my_code" class="ref button">Примеры кода</a>
+            </div>
         </header>
         <main>
             <section class="lead">
@@ -95,23 +95,21 @@ _//"\\_
             </section>
         </main>
         <footer>
-            <div class="content">
-                <ul>
-                    <li class="button show window">Контакты</li>
-                    <dialog class="window">
-                        <p><a href="https://vk.com/unvalued">https://vk.com/unvalued</a></p>
-                        <p>+7(904)635-14-24</p>
-                        <button class="close window">Закрыть</button>
-                    </dialog>
-                    <script>
-                        document.querySelector('.show.window').onclick = function() {
-                            document.querySelector('dialog.window').showModal();
-                        };
-                        document.querySelector('.close.window').onclick = function() {
-                            document.querySelector('dialog.window').close();
-                        };
-                    </script>
-                </ul>
+            <div class="references navigation">
+                <span class="button show window">Контакты</span>
+                <dialog class="window">
+                    <p><a href="https://vk.com/unvalued">https://vk.com/unvalued</a></p>
+                    <p>+7(904)635-14-24</p>
+                    <span class="button close window">Закрыть</span>
+                </dialog>
+                <script>
+                    document.querySelector('.show.window').onclick = function() {
+                        document.querySelector('dialog.window').showModal();
+                    };
+                    document.querySelector('.close.window').onclick = function() {
+                        document.querySelector('dialog.window').close();
+                    };
+                </script>
             </div>
         </footer>
     </div>

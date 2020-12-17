@@ -1,0 +1,29 @@
+/* верхушка сайта (навигация и картинка) */
+/* сама верхушка */
+header {
+    height: 27px;
+    padding-top: 152px;
+    background-image: url("pepe.png");
+    background-size: cover;
+}
+/* навигация */
+header .references {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 0 auto;
+    width: max-content;
+}
+/* кнопочки */
+header .references .button {
+    margin-left: 4px;
+}
+header .button {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: darkgrey;
+    padding: 4px;
+}
+header .button:hover {
+    background-color: grey;
+}
