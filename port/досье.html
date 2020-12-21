@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Ханнанов Владимир - M33021</title>
@@ -8,9 +9,12 @@
     <link rel="stylesheet" href="footer.css">
     <meta name="keywords" content="ИТМО, студент, информационные системы, Ханнанов">
     <meta name="description"
-          content="Досье на студента третьего курса направления Информационные системы университета ИТМО">
+        content="Досье на студента третьего курса направления Информационные системы университета ИТМО">
 </head>
-<body>
+
+<script src="lab5.js"></script>
+
+<body onload=countTags()>
     <div class="page">
         <header>
             <div class="references navigation">
@@ -19,19 +23,35 @@
                 <a href="#my_code" class="ref button">Примеры кода</a>
             </div>
         </header>
+        
         <main>
             <section class="lead">
                 <div class="content">
                     <h1 class="title">Обо мне</h1>
-                    <img src="me3.jpg" width="100" height="100" alt="avatar">
+
+                    <img src="./logo/me0.jpg" width="100" height="100" id="avatar">
+                    
+                    <script>
+                        let logoCount = 4;
+                        let logoNum = 0;
+                        let logo = document.getElementById("avatar");
+            
+                        logo.onclick = function() {
+                            logoNum = (logoNum + 1) % logoCount;
+                            logo.src = "./logo/me" + logoNum + ".jpg";
+                        }
+                    </script>
+
                 </div>
             </section>
+
             <section id="introduction">
                 <div class="content">
                     <p id="my_name">Ханнанов Владимир</p>
                     <p id="about_me">Студент ИТМО, не более</p>
                 </div>
             </section>
+
             <section id="features">
                 <h4>Мои особенности</h4>
                 <div class="content">
@@ -45,6 +65,7 @@
                     </dl>
                 </div>
             </section>
+
             <section id="successes">
                 <h4>Мои успехи</h4>
                 <div class="content">
@@ -56,6 +77,7 @@
                     </ul>
                 </div>
             </section>
+
             <section id="animal">
                 <h4>Моё тотемное животное</h4>
                 <div  class="content">
@@ -68,14 +90,16 @@ _//"\\_
                 </div>
 
             </section>
+
             <section id="quote">
                 <h4>Любимая цитата</h4>
                 <div id="cite" class="content">
-                    <img src="bear.jpg" width="160" height="90" alt="bear" id="bear">
+                    <img src="./img/bear.jpg" width="160" height="90" alt="bear" id="bear">
                     <q cite="https://vk.com/unvalued">Идёт медведь по лесу, видит - машина горит, сел в неё <del>и сгорел</del>, а она ему как раз</q>
                     <div class="clearfix"></div>
                 </div>
             </section>
+
             <section id="my_code">
                 <h4>Код, за который не стыдно</h4>
                 <div id="hello_world" class="content">
@@ -84,34 +108,59 @@ _//"\\_
                     </code>
                 </div>
             </section>
-            <section id="script">
-                <h4>Жава-скрепт</h4>
-                <div class="content">
-                    <script src="lab5.js"></script>
-                </div>
-            </section>
-            <section id="popup">
-                <h4>Окошечки!</h4>
-            </section>
+            
         </main>
-        <footer>
-            <div class="references navigation">
-                <span class="button show window">Контакты</span>
-                <dialog class="window">
-                    <p><a href="https://vk.com/unvalued">https://vk.com/unvalued</a></p>
-                    <p>+7(904)635-14-24</p>
-                    <span class="button close window">Закрыть</span>
-                </dialog>
-                <script>
-                    document.querySelector('.show.window').onclick = function() {
-                        document.querySelector('dialog.window').showModal();
-                    };
-                    document.querySelector('.close.window').onclick = function() {
-                        document.querySelector('dialog.window').close();
-                    };
-                </script>
+
+
+        <div id="contacts" class="window">
+            <div id="flex-contacts">
+                <div id="contacts-list">
+                    <div class="contacts-title contacts">Контакты</div>
+
+                    <div class="contacts-var contacts">Вконтакте:</div>
+                    <div class="contacts-content">
+                        <a href="https://vk.com/unvalued" class="contacts">unvalued</a>
+                    </div>
+
+                    <div class="contacts-var contacts">Телефоны:</div>
+                    <div class="contacts-content contacts">+7(904)635-14-24</div>
+                    <div class="contacts-content contacts">+7(981)724-82-03</div>
+
+                    <div class="contacts-var contacts">GitHub:</div>
+                    <div class="contacts-content">
+                        <a href="https://github.com/264269" class="contacts">264269</a>
+                    </div>
+                </div>
+                <button id="contacts-close" class="contacts close">Закрыть</button>
             </div>
+        </div>
+
+        
+        <footer>
+
+            <div class="references navigation">
+                <button id="contacts-show" class="contacts show">Контакты</button>
+            </div>
+
         </footer>
+        
+        <script>
+            let modal = document.getElementById("contacts");
+            let showButton = document.getElementById("contacts-show");
+            let closeButton = document.getElementById("contacts-close");
+        
+            showButton.onclick = function() {
+                if ((modal.style.display == "") || (modal.style.display == "none")) {
+                    modal.style.display = "block";
+                } else {
+                    modal.style.display = "none";
+                }
+            };
+            closeButton.onclick = function() {
+                modal.style.display = "none";
+            };
+        </script>
+
     </div>
 </body>
 </html>

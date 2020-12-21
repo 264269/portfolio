@@ -11,18 +11,18 @@
     src: url("Roboto/Roboto-Regular.ttf");
 }
 
-
-/* вся информация */
 body {
-    background: rgb(60, 80, 120) url("forest.jpg") no-repeat 100% 100%;
+    background: rgb(60, 80, 120) url("./img/forest.jpg") no-repeat 100% 100%;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
+
     margin: 0;
     padding: 0;
 }
-/* правила для контента на странице */
 .page {
-    width: 600px; /*ширина элемента*/
+    width: 70%; /*ширина элемента*/
+    max-width: 550px;
+    min-width: 150px;
     margin: auto; /*внешние отступы*/
 
     /*шрифт*/
@@ -32,55 +32,47 @@ body {
 }
 
 
-/*основная информация на сайте*/
 main {
     padding: 14px;
     border: 3px solid darkgrey;
-    margin: auto;
-    background: rgba(25, 20, 20, 0.7);
-    font-family: Roboto-Regular, sans-serif;
+    margin: 0;
+    background: rgba(20, 20, 20, 0.7);
 }
-/* заголовочек страницы */
+
+
 .lead .content{
     display: flex;
     flex-direction: column-reverse;
-    justify-content: space-between;
-    /* align-items: center; */
 }
 .lead .title {
     font-size: 250%;
     font-weight: bold;
     margin: 0 0 8px;
 }
-/* картиночки */
 .lead img {
     display: block;
-
     height: 100px;
     width: 100px;
     border-radius: 50%;
-
     margin: 0;
-
     align-self: center;
 }
 
-/* заголовочки для секций */
+
 h4 {
     font-size: 150%;
-    max-width: 75%;
+    width: 75%;
     border-bottom: 2px solid darkgrey;
     text-align: center;
     margin: 18px auto 10px
 }
-/* контент секций */
 .content {
     display: block;
     width: 95%;
     margin: auto;
 }
 
-/* представление */
+
 #introduction #my_name {
     font-size: 120%;
     font-weight: bold;
@@ -90,7 +82,7 @@ h4 {
     margin: 0;
 }
 
-/* особенности */
+
 #features .content dl {
     margin: auto;
 }
@@ -103,13 +95,13 @@ h4 {
     margin: 2px auto 2px 20px;
 }
 
-/* достижения */
+
 #successes ul {
     margin: 0;
     padding: 0 0 0 20px;
 }
 
-/* паучок */
+
 #art {
     display: table;
     text-align: center;
@@ -117,24 +109,24 @@ h4 {
     margin: 0 auto
 }
 
-/* цитата */
+
 #cite {
     margin: auto;
     align-self: center;
 }
-/* картинка с медведем */
 #bear {
     border: 3px solid darkgrey;
     float: right;
     margin-left: 20px;
 }
-/* распорка */
-.clearfix {
-    clear: both;
-}
 
-/* примеры код */
+
 #my_code {
     clear: both;
     text-align: center;
+}
+
+
+.clearfix {
+    clear: both;
 }

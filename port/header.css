@@ -1,29 +1,28 @@
 /* верхушка сайта (навигация и картинка) */
 /* сама верхушка */
 header {
-    height: 27px;
+    height: min-content;
     padding-top: 152px;
-    background-image: url("pepe.png");
+
+    background-image: url("./img/pepe.png");
     background-size: cover;
+    background-position: center top;
 }
-/* навигация */
 header .references {
     display: flex;
     justify-content: space-between;
     margin: 0 0 0 auto;
-    width: max-content;
+    max-width: max-content;
+    width: fit-content;
 }
-/* кнопочки */
-header .references .button {
-    margin-left: 4px;
-}
-header .button {
+a.button {
     color: #000000;
     font-weight: bold;
     text-decoration: none;
-    background-color: darkgrey;
+    background-color: darkgray;
     padding: 4px;
+    margin-left: 4px;
 }
-header .button:hover {
+a.button:hover {
     background-color: grey;
 }

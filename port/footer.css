@@ -1,27 +1,77 @@
-
-/*подвал*/
 footer .references {
     display: flex;
     justify-content: space-between;
     margin: 0 0 0 auto;
-    width: max-content;
+    /* max-width: max-content; */
+    width: fit-content;
 }
-footer .button {
+
+button.contacts {
+    font-family: inherit;
+    font-size: inherit;
     color: #000000;
     font-weight: bold;
-    text-decoration: none;
+    border: none;
+    border-radius: 0;
     background-color: darkgrey;
     padding: 4px;
+	cursor: pointer;
 }
-footer .button:hover {
+button.contacts:hover {
     background-color: grey;
 }
 
-/* вылезающие окна */
-dialog {
-    position: fixed;
-    border: none;
+
+.window {
+	display: none;
+	position: fixed;
+    right: 5%;
+    bottom: 5%;
+    min-width: max-content;
+    width: 15%;
+	height: fit-content;
 }
-dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.8);
+#flex-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+#contacts-close {
+    width: max-content;
+    height: max-content;
+    align-self: flex-start;
+}
+
+#contacts-list {
+    border: 3px solid darkgrey;
+    margin: 0;
+    background: rgba(20, 20, 20, 0.7);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.contacts-title {
+    align-self: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.contacts-var {
+    align-self: flex-start;
+}
+.contacts-content {
+    align-self: flex-end;
+}
+.contacts {
+    font-family: inherit;
+	color: inherit;
+	text-decoration: inherit;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+a.contacts:hover {
+	color: #8c3535;
 }

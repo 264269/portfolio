@@ -1,61 +1,75 @@
 "use strict"
 
 //random numbers for array
-var getRandomInt = function(max){
+function getRandomInt(max){
     return Math.floor(Math.random() * Math.floor(2 * max) - Math.floor(max));
-}
-
-//max&min for array (2 ways)
-function getMaxOfArray(numArray){
-    return Math.max.apply(null, numArray);
-}
-function getMinOfArray(numArray){
-    return Math.min.apply(null, numArray);
-}
-function getMax(numArray){
-    
-    var maxNum = numArray[0];
-    for (var i = 0; i < numArray.length; i++) {
-        if (numArray[i] > maxNum) {
-            maxNum = numArray[i];
-        }
-    }
-    return maxNum;
-}
-function getMin(numArray){
-    var minNum = numArray[0];
-    for (var i = 0; i < numArray.length; i++) {
-        if (numArray[i] < minNum) {
-            minNum = numArray[i];
-        }
-    }
-    return minNum;
-}
-
-//median for array
-function getMedian(numArray){
-    var half = Math.floor(numArray.length / 2);
-    numArray.sort(function(a, b) { return a - b;})
-    return numArray[half];
-}
-
-//array filling
+};
 function getArray(len, rnd) {
-    var tmp = [];
+    let tmp = [];
     for (let i = 0; i < len; i++) {
         tmp.push(getRandomInt(rnd));
     }
     return tmp;
-}
+};
 
-//quicksort
+
+//max&min for array (2 ways)
+function getMaxOfArray(numArray){
+    let result = numArray[0];
+    for (let i = 0; i < numArray.length; i++) {
+        if (numArray[i] > result) {
+            result = numArray[i];
+        };
+    };
+    return result;
+};
+function getMinOfArray(numArray){
+    let result = numArray[0];
+    for (let i = 0; i < numArray.length; i++) {
+        if (numArray[i] < result) {
+            result = numArray[i];
+        };
+    };
+    return result;
+};
+
+//median for array
+function getMedian(numArray) {
+    if (numArray.length % 2 === 1) {
+        return quickselect(numArray, numArray.length / 2);
+    } else {
+        return 0.5 * (quickselect(numArray, numArray.length / 2 - 1) +
+                      quickselect(numArray, numArray.length / 2));
+    }
+};
+function quickselect(numArray, k) {
+    if (numArray.length === 1) {
+        return numArray[0];
+    }
+
+    let pivot = numArray[0];
+
+    let lows = numArray.filter(e => e < pivot);
+    let pivs = numArray.filter(e => e === pivot);
+    let higs = numArray.filter(e => e > pivot);
+
+    if (k < lows.length) {
+        return quickselect(lows, k);
+    } else if (k < lows.length + pivs.length) {
+        return pivs[0];
+    } else {
+        return quickselect(higs, k - lows.length - pivs.length);
+    }
+};
+
+//quicksort functions
 function swap(items, firstIndex, secondIndex){
-    var temp = items[firstIndex];
+    let temp = items[firstIndex];
     items[firstIndex] = items[secondIndex];
     items[secondIndex] = temp;
-}
+};
 function partition(items, left, right) {
-    var pivot = items[Math.floor((right + left) / 2)],
+    let pivot = items[Math.floor((right + left) / 2)],
         i = left,
         j = right;
     while (i <= j) {
@@ -72,9 +86,9 @@ function partition(items, left, right) {
         }
     }
     return i;
-}
+};
 function quickSort(items, left, right) {
-    var index;
+    let index;
     if (items.length > 1) {
         index = partition(items, left, right);
         if (left < index - 1) {
@@ -85,32 +99,27 @@ function quickSort(items, left, right) {
         }
     }
     return items;
-}
+};
 
 //tags count
-function countTags(tagNames){
-    for (var [key, value] of tagNames) {
-        tagNames.set(key, document.querySelectorAll(key).length)
+function countTags() {
+    let els = document.body.getElementsByTagName("*");
+    let map = new Map();
+    for (let el of els) {
+        let tag = el.tagName;
+        if (map.has(tag)) {
+            map.set(tag, map.get(tag) + 1);
+        } else {
+            map.set(tag, 1);
+        }
     }
+
+    console.log(map);
 }
 
-var testArray = getArray(1000, 100)
+let testArray = getArray(1000, 100)
 console.log(testArray);
-
-document.writeln("Max: "+getMax(testArray)+"<br>");
-document.writeln("Min: "+getMin(testArray)+"<br>");
-document.writeln("Median: "+getMedian([...testArray])+"<br>");
-
+console.log("Max: "+getMaxOfArray(testArray));
+console.log("Min: "+getMinOfArray(testArray));
+console.log("Median: "+getMedian([...testArray]));
 console.log(quickSort(testArray, 0, testArray.length));
-
-var tags = new Map();
-tags.set("div", undefined).set("a", undefined).set("section", undefined).set("h1", undefined);
-tags.set("nav", undefined).set("ul", undefined).set("a", undefined).set("li", undefined);
-tags.set("img", undefined).set("p", undefined).set("h4", undefined).set("dl", undefined);
-tags.set("dt", undefined).set("dd", undefined).set("time", undefined).set("pre", undefined);
-tags.set("q", undefined).set("code", undefined).set("script", undefined);
-countTags(tags);
-document.writeln("<br>---tags---<br><br>");
-for (var [key, value] of tags) {
-    document.writeln(key + ": " + value + "<br>");
-}
