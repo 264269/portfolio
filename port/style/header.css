@@ -4,7 +4,7 @@ header {
     height: min-content;
     padding-top: 152px;
 
-    background-image: url("./img/pepe.png");
+    background-image: url("../img/pepe.png");
     background-size: cover;
     background-position: center top;
 }

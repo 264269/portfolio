@@ -1,18 +1,18 @@
 @font-face {
     font-family: Roboto-Thin;
-    src: url("Roboto/Roboto-Thin.ttf");
+    src: url("../Roboto/Roboto-Thin.ttf");
 }
 @font-face {
     font-family: Roboto-Black;
-    src: url("Roboto/Roboto-Black.ttf");
+    src: url("../Roboto/Roboto-Black.ttf");
 }
 @font-face {
     font-family: Roboto-Regular;
-    src: url("Roboto/Roboto-Regular.ttf");
+    src: url("../Roboto/Roboto-Regular.ttf");
 }
 
 body {
-    background: rgb(60, 80, 120) url("./img/forest.jpg") no-repeat 100% 100%;
+    background: rgb(60, 80, 120) url("../img/forest.jpg") no-repeat 100% 100%;
     background-size: cover;
     background-position: center top;
 
