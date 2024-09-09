@@ -1,2 +1,2 @@
-# portfolio
-html doc is in "port" dir
+# Portfolio
+Project for web programming uni course (HTML part)
